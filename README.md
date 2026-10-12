@@ -12,9 +12,8 @@ This file includes two versions of the generator, each on its own demo object:
 | Object | Node group | Depth input |
 |---|---|---|
 | `Fractal_Stair` | `Fractal_Stair` | **Depth** (integer: whole levels) |
-| `Fractal_Stair_Interpolated` | `FractalStairs` | **Depth_Interpolated** (float: smooth blending between levels) |
 
-Select either object and open the **Modifier** tab (wrench icon) to adjust its parameters.
+Select object and open the **Modifier** tab (wrench icon) to adjust its parameters.
 
 ### Parameters
 
@@ -23,8 +22,7 @@ Select either object and open the **Modifier** tab (wrench icon) to adjust its p
 | **Length** | 1.0 | Overall length of the staircase. |
 | **Width** | 1.0 | Side-to-side width of the staircase. |
 | **Steps** | 5 | Number of steps in each staircase. This applies at every level, so each step becomes a staircase with this many steps. |
-| **Depth** | 2 | *(Standard version)* Number of recursion levels. Each level turns every step into a smaller staircase of its own. |
-| **Depth_Interpolated** | 0.5 | *(Interpolated version)* Recursion depth as a decimal. Whole numbers match the standard version; values in between blend smoothly into the next level, with the new steps partially formed. For example, 0.5 is halfway between a plain staircase and one level of recursion. |
+| **Depth** | 2 | Number of recursion levels. Each level turns every step into a smaller staircase of its own. |
 
 ### Using it in your own project
 
@@ -32,14 +30,6 @@ Select either object and open the **Modifier** tab (wrench icon) to adjust its p
 2. Select `fractal-stairs.blend`, then open the `NodeTree` folder.
 3. Choose `Fractal_Stair` (standard) or `FractalStairs` (interpolated) and click **Append**.
 4. Select any object, add a **Geometry Nodes** modifier, and pick the node group from the dropdown.
-
-### Animating depth (interpolated version)
-
-Because **Depth_Interpolated** is a float, it can be keyframed so the staircase continuously unfolds into finer detail:
-
-1. On your starting frame, set **Depth_Interpolated** to `0`, hover over the field, and press **I** to insert a keyframe.
-2. Move to a later frame, set it to your target value (e.g. `2`), and press **I** again.
-3. Play the animation: each new level of steps grows smoothly out of the one before it.
 
 ### Performance
 
