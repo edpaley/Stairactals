@@ -43,11 +43,11 @@ Because **Depth_Interpolated** is a float, it can be keyframed so the staircase 
 
 ### Performance
 
-Geometry grows exponentially with depth: every level multiplies the number of steps by the **Steps** value. High combinations (e.g. Steps 10 with Depth 4) can slow down or freeze Blender. Increase Depth one level at a time, and save before trying large values.
+Geometry grows exponentially with depth: every level multiplies the number of steps by the **Steps** value. High combinations (e.g. Steps 10 with Depth 4) can slow down or freeze Blender. Increase Depth one level at a time.
 
 ### Exporting
 
-To use the result in other software (Unity, Unreal, 3D printing, etc.), select the object and **apply the Geometry Nodes modifier** (modifier dropdown → Apply), then export with **File → Export** (FBX, OBJ, or glTF). Applying makes the geometry permanent, so do it on a copy if you want to keep it editable.
+To use the result in other software (Unity, Unreal, 3D printing, etc.), select the object and **apply the Geometry Nodes modifier** (modifier dropdown → Apply), then export with **File → Export** (FBX, OBJ, or glTF). 
 
 ## Requirements
 
